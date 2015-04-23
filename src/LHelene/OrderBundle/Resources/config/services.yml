@@ -1,0 +1,31 @@
+parameters:
+    lhelene.order.container.product.class: "LHelene\\OrderBundle\\Container\\ProductContainer"
+    lhelene.order.loader.product.class: "LHelene\\OrderBundle\\Loader\\ProductLoader"
+    lhelene.order.service.promotion.class: "LHelene\\OrderBundle\\Service\\PromotionService"
+    lhelene.order.promotion.none.class: "LHelene\\OrderBundle\\Promotion\\NonePromotion"
+    lhelene.order.promotion.conditioner.class: "LHelene\\OrderBundle\\Promotion\\ConditionerPromotion"
+    lhelene.order.promotion.three_for_two.class: "LHelene\\OrderBundle\\Promotion\\ThreeForTwoPromotion"
+
+services:
+    lhelene.order.container.product:
+        class: "%lhelene.order.container.product.class%"
+    lhelene.order.loader.product:
+        class: "%lhelene.order.loader.product.class%"
+        arguments: ["@lhelene.order.container.product", "@logger"]
+    lhelene.order.service.promotion:
+        class: "%lhelene.order.service.promotion.class%"
+    lhelene.order.promotion.none:
+        class: "%lhelene.order.promotion.none.class%"
+        arguments: [ "@lhelene.order.container.product"]
+        tags:
+            - { name: lhelene.order.promotion }
+    lhelene.order.promotion.conditioner:
+        class: "%lhelene.order.promotion.conditioner.class%"
+        arguments: [ "@lhelene.order.container.product"]
+        tags:
+            - { name: lhelene.order.promotion }
+    lhelene.order.promotion.three_for_two:
+        class: "%lhelene.order.promotion.three_for_two.class%"
+        arguments: [ "@lhelene.order.container.product"]
+        tags:
+            - { name: lhelene.order.promotion }

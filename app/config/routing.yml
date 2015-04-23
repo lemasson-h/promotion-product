@@ -1,0 +1,4 @@
+l_helene_order:
+    resource: "@LHeleneOrderBundle/Controller/"
+    type:     annotation
+    prefix:   /

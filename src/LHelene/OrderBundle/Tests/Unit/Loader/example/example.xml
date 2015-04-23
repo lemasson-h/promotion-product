@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<order>
+    <products>
+        <product title="Rimmel Lasting Finish Lipstick 4g" price="6.50">
+            <category>Lipstick</category>
+        </product>
+        <product title="Sebamed Anti-Dandruff Shampoo 200ml" price="4.99">
+            <category>Shampoo</category>
+        </product>
+        <product title="Loreal Shampoo 200ml" price="0.99">
+            <category>Shampoo</category>
+        </product>
+        <product title="Loreal 3 Shampoo 200ml" price="5.99">
+            <category>Shampoo</category>
+        </product>
+        <product title="Elsive Anti-Dandruff Shampoo 200ml" price="1.99">
+            <category>Shampoo</category>
+        </product>
+        <product title="Elsive Conditioner 200ml" price="10">
+            <category>Conditioner</category>
+        </product>
+        <product title="Elsive 2 Conditioner 200ml" price="5">
+            <category>Conditioner</category>
+        </product>
+    </products>
+    <total>27.96</total>
+</order>
